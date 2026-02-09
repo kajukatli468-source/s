@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine for Vasu</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Pacifico&family=Poppins:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: #8b0000; /* cherry red */
+    color: salmon;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Floating emojis */
+.emoji {
+    position: fixed;
+    font-size: 24px;
+    animation: float 8s infinite linear;
+    opacity: 0.8;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-10vh); }
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #b22222; /* chili red */
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.note {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+.valentine {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    position: relative;
+    height: 80px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#yes {
+    background: #ff6f91;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+#no {
+    position: absolute;
+    background: #555;
+    color: white;
+}
+
+/* Fireworks */
+.firework {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: gold;
+    border-radius: 50%;
+    animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+    to {
+        transform: scale(20);
+        opacity: 0;
+    }
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+.popup-content {
+    background: #fff0f5;
+    color: #8b0000;
+    max-width: 600px;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 20px;
+    font-family: 'Pacifico', cursive;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating emojis -->
+<script>
+const emojis = ["🩷","💗","✨","🫶🏻"];
+for(let i=0;i<20;i++){
+    let span = document.createElement("span");
+    span.className = "emoji";
+    span.innerText = emojis[Math.floor(Math.random()*4)];
+    span.style.left = Math.random()*100 + "vw";
+    span.style.animationDuration = 5 + Math.random()*5 + "s";
+    document.body.appendChild(span);
+}
+</script>
+
+<div class="container">
+
+<h1>Happy Valentine’s / Anniversary Vasu babyyy 💖🫀🫶🏻</h1>
+
+<p class="note">
+I just wanted you to know how special you are to me. Your presence makes my days brighter and my smiles easier.
+Being with you feels calm, warm, and right.<br><br>
+Thank you for being you kind, caring, and someone I’m really grateful for.
+I hope we keep creating beautiful memories together ✨💐🌷🩷
+</p>
+
+<div class="section">
+<h2>Note 1 — When We First Met</h2>
+<p class="note">
+When I first met you, I honestly never thought you would come this close to my heart.
+I didn’t know that one day you’d mean so much to me, that your name would feel like comfort
+and your presence would feel like home. Slowly, without any warning, you became a part of my
+everyday thoughts, my smiles, my emotions. What began as something so simple turned into
+something deeply special. I didn’t plan to fall this way my heart just chose you ✨🫀🫶🏻
+</p>
+</div>
+
+<div class="section">
+<h2>Note 2 — When We Were Apart</h2>
+<p class="note">
+When we weren’t together, I missed you more than words can ever explain.
+Every single day, you were the first thought on my mind and the last one before I slept.
+Even when you weren’t with me, my heart kept finding you everywhere.
+I thought about you in silence, in prayers, in moments where I wished you were right beside me.
+That time taught me how deeply I loved you, because distance only made my feelings stronger 💔🥺💋💗
+</p>
+</div>
+
+<div class="section">
+<h2>Note 3 — After Everything</h2>
+<p class="note">
+The past time was really hard for me. Living without you for six months felt like the longest,
+heaviest phase of my life. Every day was a struggle, and every night felt incomplete.
+I held myself together with memories and hope. But when I finally found you again,
+everything slowly started falling back into place. Your return healed parts of me I didn’t even
+know were broken. Having you back made everything feel lighter, warmer, and right again.
+With you, my heart finally found peace 💖🌈💋💐✨💌
+</p>
+</div>
+
+<div class="valentine">Will you be my Valentine, Kiko?</div>
+
+<div class="buttons">
+<button id="yes">Yes</button>
+<button id="no">No</button>
+</div>
+
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+<div class="popup-content">
+<span class="close" onclick="closePopup()">×</span>
+<p><b>Dear Vasu,</b></p>
+<p>
+We’ve been through moments of happiness, silence, distance, and healing and yet, here we are,
+still choosing each other. What we share isn’t perfect, but it’s real.
+We learned, we waited, we struggled, and we grew.<br><br>
+Even when life tested us and time felt heavy, our hearts never truly let go.
+Every phase taught us the value of holding on, of understanding, and of loving a little deeper.<br><br>
+Today, on our third anniversary, we celebrate not just love, but patience, strength,
+and the bond that brought us back to each other. No matter what comes next,
+this journey will always be ours and that makes it beautiful 💋🫀🫶🏻✨
+</p>
+<p><b>Forever us. 💫💕🥹</b></p>
+</div>
+</div>
+
+<script>
+const noBtn = document.getElementById("no");
+noBtn.addEventListener("mouseover", () => {
+    noBtn.style.left = Math.random()*80 + "%";
+});
+
+document.getElementById("yes").addEventListener("click", () => {
+    for(let i=0;i<30;i++){
+        let fw = document.createElement("div");
+        fw.className = "firework";
+        fw.style.left = Math.random()*100 + "vw";
+        fw.style.top = Math.random()*100 + "vh";
+        document.body.appendChild(fw);
+        setTimeout(()=>fw.remove(),1000);
+    }
+    document.getElementById("popup").style.display="block";
+});
+
+function closePopup(){
+    document.getElementById("popup").style.display="none";
+}
+</script>
+
+</body>
+</html> 
